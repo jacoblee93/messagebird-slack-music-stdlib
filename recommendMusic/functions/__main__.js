@@ -1,4 +1,4 @@
-const lib = require('lib')({token: '5-ATnJUhwb2IrMROu73iFvQVcPX70aqjwP_mn0UsI4Y-yVZTB-T1MrOk6y9ZLjPX'});
+const lib = require('lib')({token: /** Your StdLib library token from dashboard.stdlib.com/dashboard */});
 
 /**
 * A basic Hello World function
@@ -18,7 +18,7 @@ module.exports = (artist = 'eminem', to, context, callback) => {
 
     // callback
     lib.messagebird.tel.sms({
-      originator: '13615022997',
+      originator: /** Your claimed messagebird number */,
       recipient: to,
       body: JSON.stringify(recommendedSongs)
     }, (err, result) => {
